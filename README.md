@@ -8,19 +8,25 @@ Uses php:8.5-cli-alpine3.23 image.
 
 ## Example of a podman systemd unit, run root-less:
 [Container]
+
 ContainerName=php-alpine
+
 Image=ghcr.io/monis-tf/oci-arm-host-capacity-container:latest
 
 Volume=%h/.config/containers/storage/php-alpine/oci-arm-host-capacity/.env:/app/.env:ro
+
 Volume=%h/.config/containers/storage/php-alpine/oci-arm-host-capacity/EDITED.pem:/app/.oci/EDITED.pem:ro
 
 NoNewPrivileges=yes
+
 DropCapability=ALL
 
 User=1000
+
 Group=1000
 
 LogDriver=journald
 
 [Service]
+
 Type=oneshot
