@@ -3,3 +3,5 @@
 Refer to the original repo hitrov/oci-arm-host-capacity for documentation. Mount your own enviroment file into the container.
 
 The script was taken entirely from the mentioned repo.
+
+Uses php:8.5-cli-alpine3.23 image.
